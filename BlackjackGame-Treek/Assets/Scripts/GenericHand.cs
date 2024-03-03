@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class House : GenericHand
+public class GenericHand
 {
-    // Start is called before the first frame update
+    public int HandCount { get; set;}
+
     void Start()
     {
         
