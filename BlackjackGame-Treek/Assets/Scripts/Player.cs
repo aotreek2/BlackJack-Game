@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : GenericHand
+public abstract class Player
 {
-    // Start is called before the first frame update
-    void Start()
+    public GenericHand PlayerHand { get; private set; }
+
+    protected Player()
     {
-        
+        PlayerHand = new GenericHand();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract bool Hit(Deck deck); // Returns true if player hits, false if stands
+    public abstract void PlayTurn(Deck deck); // Implement the logic for the player's turn
 }

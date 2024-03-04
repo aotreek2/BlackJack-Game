@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class House : Player
+public class HumanPlayer : Player
 {
     public override bool Hit(Deck deck)
     {
-        // if the value is less than or equal to 15, the house will hit again, afterwards it will stand.
-        return PlayerHand.GetTotalValue() <= 15;
+        return true;
     }
 
     public override void PlayTurn(Deck deck)
     {
-        while (Hit(deck))
+        if (Hit(deck))
         {
             PlayerHand.AddCard(deck.DealCard());
         }
     }
 }
+
