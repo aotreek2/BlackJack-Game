@@ -1,3 +1,12 @@
+//////////////////////////////////////////////
+//Assignment/Lab/Project: Blackjack_Treek
+//Name: Ahmed Treek
+//Section: SGD.213.0021
+//Instructor: Aurore Locklear
+//Date: 2/22/2024
+/////////////////////////////////////////////
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +23,7 @@ public class House : Player
     {
         while (Hit(deck))
         {
-            PlayerHand.AddCard(deck.DealCard());
+            PlayerHand.AddCard(deck.DealCard()); //the house draws a card
         }
     }
 }
